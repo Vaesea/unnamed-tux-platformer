@@ -1,3 +1,67 @@
-[gd_scene format=3 uid="uid://ey5fq0mejg3m"]
+[gd_scene load_steps=8 format=3 uid="uid://ey5fq0mejg3m"]
+
+[ext_resource type="Texture2D" uid="uid://32kpagxtejwv" path="res://Data/Images/Characters/Playable/Tux/tux_jump.png" id="1_qajtc"]
+[ext_resource type="Texture2D" uid="uid://cjgqrwnukqlye" path="res://Data/Images/Characters/Playable/Tux/tux_walk_0.png" id="2_u53fr"]
+[ext_resource type="Texture2D" uid="uid://bf6jj5m1o7nsj" path="res://Data/Images/Characters/Playable/Tux/tux_walk_1.png" id="3_k45xl"]
+[ext_resource type="Texture2D" uid="uid://ch4slrhlbbxiw" path="res://Data/Images/Characters/Playable/Tux/tux_stand.png" id="4_byosb"]
+[ext_resource type="Script" path="res://Source/Scenes/Characters/tux.gd" id="5_vpf1i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bfnqd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qajtc")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u53fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k45xl")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_byosb")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u53fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k45xl")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f673"]
+size = Vector2(16, 29)
 
 [node name="Tux" type="Node2D"]
+z_index = 1
+position = Vector2(0, 2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("5_vpf1i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_bfnqd")
+animation = &"walk"
+frame_progress = 0.722161
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2f673")

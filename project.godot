@@ -10,11 +10,22 @@ config_version=5
 
 [application]
 
-config/name="MasterSystemTux"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/name="Unnamed Tux Platformer"
+run/main_scene="res://Source/Scenes/Levels/Test/tiletest.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=256
+window/size/viewport_height=192
+window/size/resizable=false
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

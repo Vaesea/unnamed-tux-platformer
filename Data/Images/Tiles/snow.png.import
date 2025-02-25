@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyeg005o1rbne"
-path="res://.godot/imported/tux_sit.png-554adfb2939a607fa2000fe9293067fc.ctex"
+uid="uid://bx8ln2bj0kk0q"
+path="res://.godot/imported/snow.png-12541e39b111ebf76cefdd3449d46eb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Images/Characters/Playable/Tux/tux_sit.png"
-dest_files=["res://.godot/imported/tux_sit.png-554adfb2939a607fa2000fe9293067fc.ctex"]
+source_file="res://Data/Images/Tiles/snow.png"
+dest_files=["res://.godot/imported/snow.png-12541e39b111ebf76cefdd3449d46eb3.ctex"]
 
 [params]
 
