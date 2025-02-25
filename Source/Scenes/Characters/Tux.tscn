@@ -37,10 +37,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_u53fr")
+"texture": ExtResource("3_k45xl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_k45xl")
+"texture": ExtResource("2_u53fr")
 }],
 "loop": true,
 "name": &"walk",
@@ -60,8 +60,13 @@ script = ExtResource("5_vpf1i")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_bfnqd")
 animation = &"walk"
-frame_progress = 0.722161
+frame_progress = 0.800045
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2f673")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
